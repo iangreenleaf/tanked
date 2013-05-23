@@ -56,6 +56,20 @@ If multiple players achieve 3 victories at the same time (due to a tied battle),
 
 ## Running a battle ##
 
+### Easy version ###
+
+```bash
+git clone git://github.com/iangreenleaf/tanked.git
+cd tanked
+bundle install
+git checkout round-01 # or whatever round you wish
+./fight 1
+./fight 2
+# And so on for however many rounds take place
+```
+
+### Hard version ###
+
 Download each tank code from the linked gists. This can be done manually or using this command:
 
     bundle exec rtanque get_gist <gist_id> ...

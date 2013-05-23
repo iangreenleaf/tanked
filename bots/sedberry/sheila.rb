@@ -1,7 +1,7 @@
-require '/home/tsedberry/Documents/Scripts/RTANQUE/SHEILA/enemy.rb'
-require '/home/tsedberry/Documents/Scripts/RTANQUE/SHEILA/vector.rb'
-require '/home/tsedberry/Documents/Scripts/RTANQUE/SHEILA/utilities.rb'
-require '/home/tsedberry/Documents/Scripts/RTANQUE/SHEILA/components.rb'
+require_relative 'enemy.rb'
+require_relative 'vector.rb'
+require_relative 'utilities.rb'
+require_relative 'components.rb'
 
 
 class Sheila < RTanque::Bot::Brain

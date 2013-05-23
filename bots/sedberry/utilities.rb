@@ -1,5 +1,5 @@
 #Includes a number of useful functions involving Vectors, RTanque::Points, and RTanque::Headings.
-require '/home/tsedberry/Documents/Scripts/RTANQUE/SHEILA/vector.rb'
+require_relative 'vector.rb'
 
 
 #returns the velocity of the specified object at the specified time as a Vector

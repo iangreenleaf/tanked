@@ -1,6 +1,6 @@
 #Provides mixins that add functionality to classes that describe objects in a RTanque arena
-require '/home/tsedberry/Documents/Scripts/RTANQUE/SHEILA/vector.rb'
-require '/home/tsedberry/Documents/Scripts/RTANQUE/SHEILA/utilities.rb'
+require_relative 'vector.rb'
+require_relative 'utilities.rb'
 
 
 module Constants

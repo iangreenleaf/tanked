@@ -1,5 +1,5 @@
 #Implements a class to track enemy movements in an RTanque match
-require '/home/tsedberry/Documents/Scripts/RTANQUE/SHEILA/components.rb'
+require_relative 'components.rb'
 
 class Enemy
     include Constants

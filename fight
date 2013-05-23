@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+fight_num = ARGV.first
+seed = File.readlines("seeds")[fight_num.to_i - 1]
+`bundle exec rtanque start bots/*.rb --seed #{seed} --max-ticks=50000`

@@ -1,7 +1,7 @@
-require_relative 'enemy.rb'
-require_relative 'vector.rb'
-require_relative 'utilities.rb'
-require_relative 'components.rb'
+require_relative 'sedberry/enemy.rb'
+require_relative 'sedberry/vector.rb'
+require_relative 'sedberry/utilities.rb'
+require_relative 'sedberry/components.rb'
 
 
 class Sheila < RTanque::Bot::Brain

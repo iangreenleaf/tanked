@@ -34,7 +34,7 @@ No remote resources. No net requests. No gigantic database files. No special pla
 
 ## Logging ##
 
-Any logging/debug output *must* respect `ENV["LOG"]`. If this variable is not set, no logging should occur from the tank code. Failure to obey this rule is punishable by sever heckling.
+Any logging/debug output *must* respect `ENV["LOG"]`. If this variable is not set, no logging should occur from the tank code. Failure to obey this rule is punishable by severe heckling.
 
 Logging utilities *should* respect the standard log levels (as described in the [Logger docs](http://www.ruby-doc.org/stdlib-2.0/libdoc/logger/rdoc/Logger.html)) and limit logging to `DEBUG`, `INFO`, and `WARN`.
 

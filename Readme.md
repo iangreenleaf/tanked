@@ -2,7 +2,7 @@
 
 You must use version 0.1.0 or higher of RTanque. Previous versions do not respect seeds and will give random battle configurations.
 
-Ruby 1.9.3 is highly recommended. Other versions will work in theory, but who knows what will happen if you run this on 1.8.
+Ruby 1.9.3 is required.
 
 ## Identifiers ##
 
@@ -17,6 +17,26 @@ One non-participating individual will be designated as the Trusted Third Party (
 Tank code shall be placed in a gist (you may wish to make this a private gist). The URL for that gist shall be submitted to TTP by the arranged deadline.
 
 If a player does not submit tank code by the deadline, their tank from the previous round will be used as-is. In the first round, players not submitting code will be assigned a tank arbitrarily.
+
+# Rules and Restrictions #
+
+## No zerging ##
+
+Each player's tank code must spawn a single tank. Spawning more than one tank will result in immediate disqualification.
+
+## Randomness ##
+
+The only acceptable source of randomness is `Kernel.rand` or code that relies on this. Code must run completely deterministically if this is given a known seed.
+
+## External resources ##
+
+No remote resources. No net requests. No gigantic database files. No special platform dependencies. All this should be pretty obvious.
+
+## Logging ##
+
+Any logging/debug output *must* respect `ENV["LOG"]`. If this variable is not set, no logging should occur from the tank code. Failure to obey this rule is punishable by severe heckling.
+
+Logging utilities *should* respect the standard log levels (as described in the [Logger docs](http://www.ruby-doc.org/stdlib-2.0/libdoc/logger/rdoc/Logger.html)) and limit logging to `DEBUG`, `INFO`, and `WARN`.
 
 # Fight day #
 
@@ -36,11 +56,27 @@ If multiple players achieve 3 victories at the same time (due to a tied battle),
 
 ## Running a battle ##
 
+### Easy version ###
+
+```bash
+git clone git://github.com/iangreenleaf/tanked.git
+cd tanked
+bundle install
+git checkout round-01 # or whatever round you wish
+./fight 1
+./fight 2
+# And so on for however many rounds take place
+```
+
+### Hard version ###
+
 Download each tank code from the linked gists. This can be done manually or using this command:
 
     bundle exec rtanque get_gist <gist_id> ...
 
 Tank code files should be renamed using the player's handle, in the `bots` directory. For example, Ian Young's tank code will be placed in `bots/youngian.rb`.
+
+If a tank needs multiple files, these may be placed in a directory in `bots` named for the player's handle. The primary tank code will be named as before in the main `bots` directory and may require these additional files.
 
 To begin the battle, invoke the command with the following parameters:
 
